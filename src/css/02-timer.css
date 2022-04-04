@@ -1,0 +1,31 @@
+.timer {
+    display: flex;
+    column-gap: 18px;
+  }
+  
+  .field {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .value {
+    font-size: 36px;
+    color: darkgreen;
+  }
+  input {
+width: 300px;
+height: 30px;
+border-radius: 4px;
+  }
+  button {
+    height: 30px;
+    width: 100px;
+  }
+  
+  .label {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+  }
