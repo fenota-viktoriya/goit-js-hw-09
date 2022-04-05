@@ -25,6 +25,7 @@ const options = {
    const hoursText= document.querySelector('span[data-hours]');
    const minutesText= document.querySelector('span[data-minutes]');
    const secondsText= document.querySelector('span[data-seconds]');
+   const inputRef= document.querySelector('input');
 
 
    btnStart.addEventListener('click', onClickBtnStart);
@@ -47,6 +48,7 @@ const options = {
     startCountdown(deltaTime);
   
     btnStart.setAttribute('disabled', 'disabled');
+inputRef.setAttribute('disabled', 'disabled');
   
     counterId = setInterval(() => {
       deltaTime -= 1000;
@@ -66,6 +68,7 @@ const options = {
 function stopCountdown() {
   clearInterval(counterId);
   btnStart.removeAttribute('disabled');
+  inputRef.removeAttribute('disabled');
 }
 
 function updateTimeText({ days, hours, minutes, seconds }) {
